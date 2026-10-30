@@ -11,6 +11,7 @@ Starter repository for CS 3307 Assignment 2 - Mid Fidelity, Fall 2026
 |FR5: There must be a timer showing how much time the player has left to reach the exit in the maze|Not Done|
 |FR6: If the time runs out, the game should automatically display the path from the starting location to the exit that uses the number of available coins.|Not Done|
 |FR7: There would be doors that give me the player coins when the player passes through it. In other words, passing through one of these doors would cause the number of coins to increase. If the player walks back through the door, then the number of coins the player has should decrease back down.|Not Done|
+|FR8: The player should be able to select from multiple mazes to solve.|Not Done|
 
 
 
