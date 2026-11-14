@@ -1,0 +1,18 @@
+name: Warm-up
+coins: 1
+time: 60
+
+; Two routes: the top one needs a 3-coin door you cannot afford yet.
+; Take the bottom route and pick up the reward door first.
+door a paid 2
+door b reward 2
+door c paid 3
+
+grid:
+###########
+#S..#.....#
+#.#.#.###c#
+#.#...#...#
+#.#####a#.#
+#...b...#E#
+###########

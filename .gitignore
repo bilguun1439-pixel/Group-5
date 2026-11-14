@@ -1,0 +1,27 @@
+# Build output
+build/
+build-*/
+cmake-build-*/
+out/
+
+# Qt Creator and IDE user files
+CMakeLists.txt.user*
+*.user
+.qtc_clangd/
+.vscode/
+.idea/
+
+# Compiled binaries and objects
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.app/
+
+# OS files
+.DS_Store
+Thumbs.db
