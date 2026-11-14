@@ -36,10 +36,11 @@ void Game::keyPressEvent(QKeyEvent* event) {
     QWidget::keyPressEvent(event);
 }
 
+// getter method for the maze
 const Maze& Game::getMaze() const {
     return maze;
 }
-
+// getter method for the player
 const Player& Game::getPlayer() const {
     return player;
 }
