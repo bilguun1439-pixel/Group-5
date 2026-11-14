@@ -1,32 +1,34 @@
-#include "Maze.h"
+#ifndef MAZE_H
+#include <string>
+#include <vector>
+#include "Graph.h" // Include your Graph, Node, and Edge classes
 
-Maze::Maze(const std::string& name, int rows, int cols, int startRow, int startCol)
-    : name(name),
-      grid(rows, std::vector<Cell>(cols, Cell::Empty)), // every cell starts Empty
-      doors(),
-      startRow(startRow),
-      startCol(startCol) {}
+enum class Cell { Empty, Wall }; // Example cell type definition
 
-const std::string& Maze::getName() const {
-    return name;
-}
+class Maze {
+private:
+    std::string name;
+    int rows;
+    int cols;
+    int startRow;
+    int startCol;
+    std::vector<std::vector<Cell>> grid;
+    Graph graph; // The graph representation of the maze
 
-int Maze::getRows() const {
-    return static_cast<int>(grid.size());
-}
+    // Helper to convert 2D coordinates to a 1D node number
+    int getCellIndex(int r, int c) const {
+        return r * cols + c;
+    }
 
-int Maze::getCols() const {
-    return grid.empty() ? 0 : static_cast<int>(grid[0].size());
-}
+public:
+    Maze(const std::string& name, int rows, int cols, int startRow, int startCol);
 
-int Maze::getStartRow() const {
-    return startRow;
-}
+    const std::string& getName() const;
+    int getRows() const;
+    int getCols() const;
+    int getStartRow() const;
+    int getStartCol() const;
+    Graph& getGraph(); /
+};
 
-int Maze::getStartCol() const {
-    return startCol;
-}
-
-const std::vector<Door>& Maze::getDoors() const {
-    return doors;
-}
+#endif
